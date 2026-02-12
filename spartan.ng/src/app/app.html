@@ -1,0 +1,15 @@
+<button hlmBtn>Button</button>
+<hlm-date-picker [min]="minDate" [max]="maxDate">
+	<span>Pick a date</span>
+</hlm-date-picker>
+
+<hlm-tabs tab="account" class="w-full">
+  <hlm-tabs-list class="grid w-full grid-cols-2" aria-label="tabs example">
+    <button hlmTabsTrigger="account">Account</button>
+    <button hlmTabsTrigger="password">Password</button>
+  </hlm-tabs-list>
+  <div hlmTabsContent="account">Make your account here</div>
+  <div hlmTabsContent="password">Change your password here</div>
+</hlm-tabs>
+
+<router-outlet />

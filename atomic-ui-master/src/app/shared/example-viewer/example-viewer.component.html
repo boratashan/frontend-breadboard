@@ -1,0 +1,40 @@
+<mat-card class="at-no-p at-mb-40" style="background-color: transparent">
+    <mat-toolbar>
+        <h2>{{exampleData.title}}</h2>
+        <span fxFlex></span>
+        <button mat-icon-button (click)="toggleCodeViewer()">
+            <mat-icon>code</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <div *ngIf="showSourceCode">
+        <mat-tab-group class="at-h-300">
+            <mat-tab label="HTML">
+                <at-scrollbar>
+                    <td-highlight lang="html">
+                        {{htmlCode}}
+                    </td-highlight>
+                </at-scrollbar>
+            </mat-tab>
+            <mat-tab label="TS">
+                <at-scrollbar>
+                    <td-highlight lang="typescript">
+                        {{tsCode}}
+                    </td-highlight>
+                </at-scrollbar>
+            </mat-tab>
+            <mat-tab label="CSS">
+                <at-scrollbar>
+                    <td-highlight lang="css">
+                        {{scssCode}}
+                    </td-highlight>
+                </at-scrollbar>
+            </mat-tab>
+        </mat-tab-group>
+        <mat-divider></mat-divider>
+    </div>
+
+    <div class="at-p-40">
+        <ng-template [portalHost]="selectedPortal"></ng-template>
+    </div>
+</mat-card>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelyne | Kurumsal Entegrasyonun Geleceği</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cds-background: #ffffff;
+            --cds-layer: #f4f4f4;
+            --cds-text-01: #161616;
+            --cds-text-02: #525252;
+            --cds-link: #6929c4; /* Carbon Purple */
+            --cds-ui-01: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans', sans-serif; background: var(--cds-background); color: var(--cds-text-01); line-height: 1.5; }
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+
+        /* Navigation */
+        nav {
+            height: 48px;
+            background: #161616;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo { font-weight: 600; font-size: 14px; letter-spacing: 1px; }
+        .logo span { color: #be95ff; }
+
+        /* Hero Section */
+        header {
+            padding: 160px 10% 80px;
+            border-bottom: 1px solid var(--cds-ui-01);
+            background: linear-gradient(180deg, #fdfbff 0%, #ffffff 100%);
+        }
+        .badge {
+            display: inline-block;
+            background: #e5d9ff;
+            color: #6929c4;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        h1 { font-size: 64px; font-weight: 300; line-height: 1.1; margin-bottom: 24px; letter-spacing: -2px; }
+        h1 b { font-weight: 600; color: var(--cds-link); }
+        .hero-desc { font-size: 20px; color: var(--cds-text-02); max-width: 700px; margin-bottom: 40px; }
+
+        /* Feature Grid (Jetic Style but Carbon UI) */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid var(--cds-ui-01);
+        }
+        .feature-card {
+            padding: 48px 32px;
+            border-right: 1px solid var(--cds-ui-01);
+            transition: background 0.2s;
+        }
+        .feature-card:hover { background: var(--cds-layer); }
+        .feature-card h3 { font-size: 20px; margin-bottom: 16px; font-weight: 600; }
+        .feature-card p { font-size: 14px; color: var(--cds-text-02); }
+
+        /* AI Section - Your Secret Sauce */
+        .ai-highlight {
+            padding: 80px 10%;
+            background: #161616;
+            color: white;
+            display: flex;
+            gap: 64px;
+            align-items: center;
+        }
+        .ai-text { flex: 1; }
+        .ai-visual { 
+            flex: 1; 
+            background: #262626; 
+            padding: 32px; 
+            border: 1px solid #393939;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: #be95ff;
+        }
+
+        /* Call to Action */
+        .cta {
+            padding: 100px 10%;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--cds-link);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { background: #491d8b; transform: translateY(-2px); }
+
+        footer {
+            padding: 40px 10%;
+            background: var(--cds-layer);
+            font-size: 12px;
+            color: var(--cds-text-02);
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--cds-ui-01);
+        }
+
+        @media (max-width: 1024px) {
+            .features { grid-template-columns: repeat(2, 1fr); }
+            h1 { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CAMEL<span>YNE</span></div>
+        <div class="mono" style="font-size: 12px;">v1.0.0-ALPHA</div>
+    </nav>
+
+    <header>
+        <div class="badge">Sıfır Bağımlılık • Saf Apache Camel • Gemini AI</div>
+        <h1>Entegrasyonun <b>Karmaşıklığını</b><br>AI ile Bitirin.</h1>
+        <p class="hero-desc">
+            Jetic'in sunduğu cloud-native gücünü, 25 yıllık kurumsal tecrübe ve Gemini AI zekasıyla birleştirdik. Camelyne, kendi kendini onaran ve saniyeler içinde mapping yapan tek iPaaS platformudur.
+        </p>
+        <button class="btn-primary">Ücretsiz Beta'ya Katıl →</button>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <span class="mono" style="color: var(--cds-link); display: block; margin-bottom: 16px;">01. Visual Studio</span>
+            <h3>Low-Code Camel Studio</h3>
+            <p>Apache Camel DSL kodunu görsel olarak sürükle-bırak ile tasarlayın. Kodun mülkiyeti her zaman sizde kalsın.</p>
+        </div>
+        <div class="feature-card">
+            <span class="mono" style="color: var(--cds-link); display: block; margin-bottom: 16px;">02. Smart Mapping</span>
+            <h3>Gemini AI Transformer</h3>
+            <p>Karmaşık JSON/XML eşleştirmelerini AI asistanı ile saniyeler içinde tamamlayın. Manuel hata payını sıfıra indirin.</p>
+        </div>
+        <div class="feature-card">
+            <span class="mono" style="color: var(--cds-link); display: block; margin-bottom: 16px;">03. Resiliency</span>
+            <h3>Auto-Healing Motoru</h3>
+            <p>Hataları oluşmadan öngören ve patlayan rotaları AI ile anlık onaran kurumsal düzeyde stabilite.</p>
+        </div>
+        <div class="feature-card">
+            <span class="mono" style="color: var(--cds-link); display: block; margin-bottom: 16px;">04. Freedom</span>
+            <h3>Hibrit Deployment</h3>
+            <p>İster bizim güvenli bulutumuzda, ister kendi Kubernetes cluster'ınızda çalıştırın. Vendor lock-in riskine son verin.</p>
+        </div>
+    </section>
+
+    <section class="ai-highlight">
+        <div class="ai-text">
+            <h2 style="font-size: 32px; font-weight: 300; margin-bottom: 24px;">Mimarlar İçin <b>Mimarlar Tarafından</b> Tasarlandı.</h2>
+            <p style="color: #c6c6c6; margin-bottom: 32px;">
+                25 yıllık "fixer" tecrübemizi Gemini AI modeline enjekte ettik. Camelyne sadece bir araç değil, yanınızda çalışan kıdemli bir entegrasyon mühendisidir.
+            </p>
+            <ul class="mono" style="font-size: 14px; color: #be95ff; list-style: none;">
+                <li>> Otomatik Hata Analizi</li>
+                <li>> Akıllı Veri Transformasyonu</li>
+                <li>> DSL Senkronizasyonu</li>
+            </ul>
+        </div>
+        <div class="ai-visual">
+            <div style="color: #8d8d8d; margin-bottom: 10px;">// Gemini AI Analiz Ediyor...</div>
+            <div>[SUCCESS] SAP_Target_v2 Şeması Algılandı</div>
+            <div>[AI_ACTION] Trendyol_Order -> SAP_IDoc Eşleşmesi Önerildi</div>
+            <div style="margin-top: 20px; color: #ffffff;">Mapping Tamamlandı: %98 Güven Skoru</div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2 style="font-size: 36px; margin-bottom: 32px; font-weight: 300;">Modern iPaaS Deneyimine Hazır mısınız?</h2>
+        <button class="btn-primary">Hemen Başla</button>
+    </section>
+
+    <footer>
+        <div>© 2026 CAMELYNE | Kurumsal Entegrasyon ve AI Çözümleri</div>
+        <div class="mono">STATUS: STABLE_BUILD</div>
+    </footer>
+
+</body>
+</html>

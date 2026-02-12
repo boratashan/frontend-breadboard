@@ -1,0 +1,42 @@
+{
+  "name": "atomic-ui",
+  "version": "1.0.5",
+  "description": "An UI framework built on Angular Material",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "atomic",
+    "reusable"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbartumeu/atomic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dbartumeu/atomic/issues"
+  },
+  "license": "MIT",
+  "author": "Damian Bartumeu",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  },
+  "peerDependencies": {
+    "@angular/animations": "^5.2.9",
+    "@angular/common": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "@angular/forms": "^5.2.9",
+    "@angular/router": "^5.2.9",
+    "@angular/cdk": "^5.2.4",
+    "@angular/material": "^5.2.4",
+    "@angular/flex-layout": "^5.0.0-beta.13",
+    "lodash": "^4.17.5"
+  },
+  "main": "bundles/atomic-ui.umd.js",
+  "module": "atomic-ui.es5.js",
+  "es2015": "atomic-ui.js",
+  "typings": "atomic-ui.d.ts",
+  "metadata": "atomic-ui.metadata.json"
+}

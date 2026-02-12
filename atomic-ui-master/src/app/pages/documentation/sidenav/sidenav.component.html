@@ -1,0 +1,17 @@
+<div fxLayout="column" class="at-hp-100">
+    <div fxLayout="row" fxLayoutAlign="start center" class="at-ph-20 at-pt-20 at-pb-10">
+        <label class="at-mr-15">Version:</label>
+        <button mat-button [matMenuTriggerFor]="menu">{{selectedVersion}}</button>
+        <mat-menu #menu="matMenu">
+            <a *ngFor="let v of versions" mat-menu-item
+                    (click)="changeVersion(v)">{{v}}
+            </a>
+        </mat-menu>
+    </div>
+
+    <at-scrollbar fxFlex fxLayout="column">
+        <mat-nav-list fxLayout="column" class="at-sidenav-list sidenav-toplevel">
+            <at-sidenav-item *ngFor="let atSidenavItem of atSidenavItems" [item]="atSidenavItem"></at-sidenav-item>
+        </mat-nav-list>
+    </at-scrollbar>
+</div>

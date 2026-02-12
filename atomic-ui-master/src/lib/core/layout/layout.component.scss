@@ -1,0 +1,10 @@
+at-layout{
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.transparent {
+  background-color: transparent !important;
+  background-image: none;
+}
